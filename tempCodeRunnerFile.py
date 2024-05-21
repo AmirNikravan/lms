@@ -1,2 +1,1 @@
-
-"QToolButton:hover{\n"
+app
