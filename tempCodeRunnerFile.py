@@ -1,0 +1,2 @@
+
+"QToolButton:hover{\n"
