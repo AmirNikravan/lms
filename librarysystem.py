@@ -4,6 +4,7 @@ from addbook import Ui_Dialog
 from addmember import Add_Member
 from viewbooks import View_Books
 from viewmembers import View_Members
+import sqlite3
 class LibrarySystem(QMainWindow,Ui_MainWindow):
     def __init__(self):
         super().__init__()
@@ -13,6 +14,7 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
         self.toolButton_addmember.clicked.connect(self.add_member)
         self.toolButton_viewbook.clicked.connect(self.view_books)
         self.toolButton_viewmember.clicked.connect(self.view_member)
+        self.lineEdit_bookid.returnPressed.connect(self.book_id)
     def add_book(self):
         dialog = QDialog(self)
         ui = Ui_Dialog()
@@ -33,3 +35,15 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
         ui = View_Members()
         ui.setupUi(dialog)
         dialog.exec()
+    def book_id(self):
+        id = self.lineEdit_bookid.text()
+        try:
+            mydb = sqlite3.connect('DB.db')
+            mycursor = mydb.cursor()
+            mycursor.execute("SELECT * FROM addbook WHERE id = '"+id+"'")
+            myresult = mycursor.fetchall()
+            for row in myresult:
+                self.label_bookname.setText(f"Book Name :{row[0]}")
+                self.label_bookauthor.setText(f"Author :{row[1]}")
+        except sqlite3.Error as error:
+            print(error)
