@@ -107,7 +107,7 @@ class Add_Member(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "Add Member"))
         self.lineEdit_id.setPlaceholderText(_translate("Dialog", "Please Enter Member ID"))
         self.lineEdit_name.setPlaceholderText(_translate("Dialog", "Please Enter Member Name"))
         self.lineEdit_mobile.setPlaceholderText(_translate("Dialog", "Please Enter Member Mobile"))
