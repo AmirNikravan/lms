@@ -15,6 +15,7 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
         self.toolButton_viewbook.clicked.connect(self.view_books)
         self.toolButton_viewmember.clicked.connect(self.view_member)
         self.lineEdit_bookid.returnPressed.connect(self.book_id)
+        self.lineEdit_memberid.returnPressed.connect(self.member_id)
     def add_book(self):
         dialog = QDialog(self)
         ui = Ui_Dialog()
@@ -46,4 +47,17 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
                 self.label_bookname.setText(f"Book Name :{row[0]}")
                 self.label_bookauthor.setText(f"Author :{row[1]}")
         except sqlite3.Error as error:
-            print(error)
+            pass
+
+    def member_id(self):
+        member = self.lineEdit_memberid.text()
+        try:
+            mydb = sqlite3.connect('DB.db')
+            mycursor = mydb.cursor()
+            mycursor.execute("SELECT * FROM addmember WHERE id = '" + member + "'")
+            myresult = mycursor.fetchall()
+            for row in myresult:
+                self.label_membername.setText(f"Member Name :{row[1]}")
+                self.label_contactinfo.setText(f"Contact Info :{row[3]}")
+        except sqlite3.Error as error:
+            pass
