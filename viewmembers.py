@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file '.\viewbooks.ui'
+# Form implementation generated from reading ui file '.\viewmembers.ui'
 #
 # Created by: PyQt6 UI code generator 6.6.1
 #
@@ -9,17 +9,18 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 import sqlite3
 from PyQt6.QtWidgets import QTableWidgetItem, QTableWidget, QHeaderView, QAbstractItemView
-class View_Books(object):
+
+class View_Members(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(571, 459)
+        Dialog.resize(571, 412)
         Dialog.setStyleSheet("background-color: rgb(153, 149, 136);")
         self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName("verticalLayout")
         self.tableWidget = QtWidgets.QTableWidget(parent=Dialog)
         self.tableWidget.setStyleSheet("background-color: rgb(212, 255, 146);")
         self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(5)
+        self.tableWidget.setColumnCount(4)
         self.tableWidget.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
@@ -29,10 +30,8 @@ class View_Books(object):
         self.tableWidget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, item)
-        self.tableWidget.horizontalHeader().setDefaultSectionSize(112)
-        self.tableWidget.horizontalHeader().setMinimumSectionSize(24)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(139)
+        self.tableWidget.verticalHeader().setDefaultSectionSize(31)
         self.verticalLayout.addWidget(self.tableWidget)
         self.pushButton = QtWidgets.QPushButton(parent=Dialog)
         self.pushButton.setMinimumSize(QtCore.QSize(0, 35))
@@ -46,15 +45,14 @@ class View_Books(object):
 "")
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
-
+        self.pushButton.clicked.connect(self.view_members)
         self.retranslateUi(Dialog)
-        self.pushButton.clicked.connect(self.view_book)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
-    def view_book(self):
+    def view_members(self):
         try:
             mydb = sqlite3.connect("DB.db")
             mycursor = mydb.cursor()
-            mycursor.execute("SELECT * FROM addbook")
+            mycursor.execute("SELECT * FROM addmember")
             myresult = mycursor.fetchall()
             self.tableWidget.setRowCount(0)
             for row_number , row_data in enumerate(myresult):
@@ -65,17 +63,15 @@ class View_Books(object):
             pass
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "View Books"))
+        Dialog.setWindowTitle(_translate("Dialog", "View Members"))
         item = self.tableWidget.horizontalHeaderItem(0)
-        item.setText(_translate("Dialog", "Title"))
-        item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("Dialog", "ID"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "Name"))
         item = self.tableWidget.horizontalHeaderItem(2)
-        item.setText(_translate("Dialog", "Author"))
+        item.setText(_translate("Dialog", "Moblie"))
         item = self.tableWidget.horizontalHeaderItem(3)
-        item.setText(_translate("Dialog", "Publisher"))
-        item = self.tableWidget.horizontalHeaderItem(4)
-        item.setText(_translate("Dialog", "Available"))
-        self.pushButton.setText(_translate("Dialog", "View Books"))
+        item.setText(_translate("Dialog", "Email"))
+        self.pushButton.setText(_translate("Dialog", "View Members"))
 
 
