@@ -12,32 +12,67 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(450, 450)
-        Dialog.setStyleSheet("background-color: rgb(255, 218, 174);")
+        Dialog.resize(367, 377)
+        Dialog.setStyleSheet("background-color: rgb(153, 149, 136);")
         self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName("verticalLayout")
         self.lineEdit_title = QtWidgets.QLineEdit(parent=Dialog)
         self.lineEdit_title.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.lineEdit_title.setStyleSheet("QLineEdit{border-radius:5px;\n"
+"background-color: rgb(217, 255, 193);\n"
+"}\n"
+"QLineEdit:focus{\n"
+"border: 2px solid rgb(255, 215, 238);\n"
+"}\n"
+"")
         self.lineEdit_title.setText("")
         self.lineEdit_title.setObjectName("lineEdit_title")
         self.verticalLayout.addWidget(self.lineEdit_title)
         self.lineEdit_id = QtWidgets.QLineEdit(parent=Dialog)
         self.lineEdit_id.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.lineEdit_id.setStyleSheet("QLineEdit{border-radius:5px;\n"
+"background-color: rgb(217, 255, 193);\n"
+"}\n"
+"QLineEdit:focus{\n"
+"border: 2px solid rgb(255, 215, 238);\n"
+"}\n"
+"")
         self.lineEdit_id.setText("")
         self.lineEdit_id.setObjectName("lineEdit_id")
         self.verticalLayout.addWidget(self.lineEdit_id)
         self.lineEdit_author = QtWidgets.QLineEdit(parent=Dialog)
         self.lineEdit_author.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.lineEdit_author.setStyleSheet("QLineEdit{border-radius:5px;\n"
+"background-color: rgb(217, 255, 193);\n"
+"}\n"
+"QLineEdit:focus{\n"
+"border: 2px solid rgb(255, 215, 238);\n"
+"}\n"
+"")
         self.lineEdit_author.setText("")
         self.lineEdit_author.setObjectName("lineEdit_author")
         self.verticalLayout.addWidget(self.lineEdit_author)
         self.lineEdit_publisher = QtWidgets.QLineEdit(parent=Dialog)
         self.lineEdit_publisher.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.lineEdit_publisher.setStyleSheet("QLineEdit{border-radius:5px;\n"
+"background-color: rgb(217, 255, 193);\n"
+"}\n"
+"QLineEdit:focus{\n"
+"border: 2px solid rgb(255, 215, 238);\n"
+"}\n"
+"")
         self.lineEdit_publisher.setText("")
         self.lineEdit_publisher.setObjectName("lineEdit_publisher")
         self.verticalLayout.addWidget(self.lineEdit_publisher)
         self.pushButton = QtWidgets.QPushButton(parent=Dialog)
         self.pushButton.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.pushButton.setStyleSheet("QPushButton{border-radius:11px;\n"
+"background-color: rgb(146, 193, 255);\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: rgb(255, 166, 139);\n"
+"}\n"
+"")
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         self.label = QtWidgets.QLabel(parent=Dialog)
@@ -50,7 +85,7 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Add Book"))
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.lineEdit_title.setPlaceholderText(_translate("Dialog", "Please Enter Title"))
         self.lineEdit_id.setPlaceholderText(_translate("Dialog", "Please Enter ID"))
         self.lineEdit_author.setPlaceholderText(_translate("Dialog", "Please Enter Author"))
@@ -58,11 +93,3 @@ class Ui_Dialog(object):
         self.pushButton.setText(_translate("Dialog", "Add Book"))
 
 
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     Dialog = QtWidgets.QDialog()
-#     ui = Ui_Dialog()
-#     ui.setupUi(Dialog)
-#     Dialog.show()
-#     sys.exit(app.exec())

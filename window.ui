@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>920</width>
-    <height>550</height>
+    <height>542</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,182 +17,214 @@
    <string notr="true">background-color: rgb(217, 218, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>6</x>
-      <y>6</y>
-      <width>801</width>
-      <height>461</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(222, 255, 233);</string>
-    </property>
-    <property name="tabShape">
-     <enum>QTabWidget::Rounded</enum>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <widget class="QWidget" name="tab_1">
-     <attribute name="title">
-      <string>Issue_book</string>
-     </attribute>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QWidget" name="horizontalWidget" native="true">
-        <property name="styleSheet">
-         <string notr="true">QWidget{
-background-color: rgb(196, 255, 178);
-}</string>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QLineEdit" name="lineEdit_bookid">
-           <property name="placeholderText">
-            <string>Please Enter Book ID</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QWidget" name="" native="true">
-           <layout class="QVBoxLayout" name="verticalLayout_2">
-            <item>
-             <widget class="QLabel" name="label_bookname">
-              <property name="font">
-               <font>
-                <family>Sitka Banner</family>
-                <pointsize>16</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Book Name</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_bookauthor">
-              <property name="font">
-               <font>
-                <family>Sitka Banner</family>
-                <pointsize>16</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Book Author</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QWidget" name="horizontalWidget_2" native="true">
-        <property name="styleSheet">
-         <string notr="true">QWidget{
-background-color: rgb(196, 255, 178);
-}</string>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLineEdit" name="lineEdit_memberid">
-           <property name="placeholderText">
-            <string>Please Enter Member ID</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QWidget" name="widget" native="true">
-           <layout class="QVBoxLayout" name="verticalLayout_3">
-            <item>
-             <widget class="QLabel" name="label_membername">
-              <property name="font">
-               <font>
-                <family>Sitka Banner</family>
-                <pointsize>16</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Member Name</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_contactinfo">
-              <property name="font">
-               <font>
-                <family>Sitka Banner</family>
-                <pointsize>16</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Contact Info</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 196, 199);</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab_1">
+       <attribute name="title">
+        <string>Issue_book</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <spacer name="horizontalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QWidget" name="horizontalWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">QWidget{
+
+	background-color: rgb(243, 255, 196);
+
+
+}</string>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLineEdit" name="lineEdit_bookid">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{border-radius:5px;
+background-color: rgb(255, 255, 255);
+
+}
+QLineEdit:focus{
+border: 2px solid rgb(255, 215, 238);
+}
+</string>
+             </property>
+             <property name="placeholderText">
+              <string>Please Enter Book ID</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QLabel" name="label_bookname">
+                <property name="font">
+                 <font>
+                  <family>Sitka Banner</family>
+                  <pointsize>16</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Book Name</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_bookauthor">
+                <property name="font">
+                 <font>
+                  <family>Sitka Banner</family>
+                  <pointsize>16</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Book Author</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item>
-         <widget class="QToolButton" name="toolButton_issuebook">
+         <widget class="QWidget" name="horizontalWidget_2" native="true">
           <property name="styleSheet">
-           <string notr="true">QToolButton{border-radius:11px;
+           <string notr="true">QWidget{
+
+	background-color: rgb(243, 255, 196);
+
+
+}</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="lineEdit_memberid">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{border-radius:5px;
+background-color: rgb(255, 255, 255);
+
+}
+QLineEdit:focus{
+border: 2px solid rgb(255, 215, 238);
+}
+</string>
+             </property>
+             <property name="placeholderText">
+              <string>Please Enter Member ID</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QLabel" name="label_membername">
+                <property name="font">
+                 <font>
+                  <family>Sitka Banner</family>
+                  <pointsize>16</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Member Name</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_contactinfo">
+                <property name="font">
+                 <font>
+                  <family>Sitka Banner</family>
+                  <pointsize>16</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Contact Info</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButton_issuebook">
+            <property name="styleSheet">
+             <string notr="true">QToolButton{border-radius:11px;
 
 
 background-color: rgb(255, 110, 185);
@@ -205,372 +237,384 @@ QToolButton:hover{
 	background-color: rgb(34, 133, 255);
 }
 </string>
-          </property>
-          <property name="text">
-           <string>Issue Book</string>
-          </property>
-          <property name="icon">
-           <iconset resource="Icons.qrc">
-            <normaloff>:/images/images/issuebook.png</normaloff>:/images/images/issuebook.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>40</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="toolButtonStyle">
-           <enum>Qt::ToolButtonTextUnderIcon</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
+            </property>
+            <property name="text">
+             <string>Issue Book</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons.qrc">
+              <normaloff>:/images/images/issuebook.png</normaloff>:/images/images/issuebook.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextUnderIcon</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
        </layout>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Renew/Submission Book</string>
-     </attribute>
-     <layout class="QVBoxLayout" name="verticalLayout_5">
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Renew/Submission Book</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLineEdit" name="lineEdit_submission">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit{border-radius:5px;
+background-color: rgb(217, 255, 193);
+}
+QLineEdit:focus{
+border: 2px solid rgb(255, 215, 238);
+}
+</string>
+          </property>
+          <property name="placeholderText">
+           <string>Please Enter Book ID</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 227, 194);</string>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>295</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Book ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Member ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Issue Time</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>RenewCount</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButton_renew">
+            <property name="styleSheet">
+             <string notr="true">QToolButton{border-radius:11px;
+
+
+background-color: rgb(255, 110, 185);
+
+}
+QToolButton:hover{
+
+
+
+	background-color: rgb(34, 133, 255);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Renew Book</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons.qrc">
+              <normaloff>:/images/images/renew.png</normaloff>:/images/images/renew.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextUnderIcon</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButton_submit">
+            <property name="styleSheet">
+             <string notr="true">QToolButton{border-radius:11px;
+
+
+background-color: rgb(255, 110, 185);
+
+}
+QToolButton:hover{
+
+
+
+	background-color: rgb(34, 133, 255);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Submit Book</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons.qrc">
+              <normaloff>:/images/images/submission.png</normaloff>:/images/images/submission.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextUnderIcon</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLineEdit" name="lineEdit_submission">
-        <property name="placeholderText">
-         <string>Please Enter Book ID</string>
+       <widget class="QToolButton" name="toolButton_addbook">
+        <property name="maximumSize">
+         <size>
+          <width>145</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sitka Small</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{border-radius:11px;
+background-color: rgb(146, 193, 255);
+}
+QToolButton:hover{
+background-color: rgb(255, 166, 139);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Add Book</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icons.qrc">
+          <normaloff>:/images/images/addbook.png</normaloff>:/images/images/addbook.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>68</width>
+          <height>68</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QTableWidget" name="tableWidget">
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>198</number>
-        </attribute>
-        <column>
-         <property name="text">
-          <string>Book ID</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Member ID</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Issue Time</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>RenewCount</string>
-         </property>
-        </column>
+       <widget class="QToolButton" name="toolButton_addmember">
+        <property name="maximumSize">
+         <size>
+          <width>220</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sitka Small</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{border-radius:11px;
+background-color: rgb(146, 193, 255);
+}
+QToolButton:hover{
+background-color: rgb(255, 166, 139);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Add Member</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icons.qrc">
+          <normaloff>:/images/images/addmember.png</normaloff>:/images/images/addmember.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>68</width>
+          <height>68</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
        </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <spacer name="horizontalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QToolButton" name="toolButton_renew">
-          <property name="styleSheet">
-           <string notr="true">QToolButton{border-radius:11px;
-
-
-background-color: rgb(255, 110, 185);
-
+       <widget class="QToolButton" name="toolButton_viewbook">
+        <property name="maximumSize">
+         <size>
+          <width>220</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sitka Small</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{border-radius:11px;
+background-color: rgb(146, 193, 255);
 }
 QToolButton:hover{
-
-
-
-	background-color: rgb(34, 133, 255);
+background-color: rgb(255, 166, 139);
 }
 </string>
-          </property>
-          <property name="text">
-           <string>Renew Book</string>
-          </property>
-          <property name="icon">
-           <iconset resource="Icons.qrc">
-            <normaloff>:/images/images/renew.png</normaloff>:/images/images/renew.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="toolButtonStyle">
-           <enum>Qt::ToolButtonTextUnderIcon</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QToolButton" name="toolButton_submit">
-          <property name="styleSheet">
-           <string notr="true">QToolButton{border-radius:11px;
-
-
-background-color: rgb(255, 110, 185);
-
+        </property>
+        <property name="text">
+         <string>View Book</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icons.qrc">
+          <normaloff>:/images/images/viewbook .png</normaloff>:/images/images/viewbook .png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>68</width>
+          <height>68</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="toolButton_viewmember">
+        <property name="maximumSize">
+         <size>
+          <width>220</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sitka Small</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{border-radius:11px;
+background-color: rgb(146, 193, 255);
 }
 QToolButton:hover{
-
-
-
-	background-color: rgb(34, 133, 255);
+background-color: rgb(255, 166, 139);
 }
 </string>
-          </property>
-          <property name="text">
-           <string>Submit Book</string>
-          </property>
-          <property name="icon">
-           <iconset resource="Icons.qrc">
-            <normaloff>:/images/images/submission.png</normaloff>:/images/images/submission.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="toolButtonStyle">
-           <enum>Qt::ToolButtonTextUnderIcon</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_6">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
+        </property>
+        <property name="text">
+         <string>View Member</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icons.qrc">
+          <normaloff>:/images/images/viewmembers.png</normaloff>:/images/images/viewmembers.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>68</width>
+          <height>68</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
       </item>
      </layout>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>70</y>
-      <width>91</width>
-      <height>391</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QToolButton" name="toolButton_addbook">
-       <property name="maximumSize">
-        <size>
-         <width>145</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Sitka Small</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QToolButton{border-radius:11px;
-background-color: rgb(146, 193, 255);
-}
-QToolButton:hover{
-background-color: rgb(255, 166, 139);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>Add Book</string>
-       </property>
-       <property name="icon">
-        <iconset resource="Icons.qrc">
-         <normaloff>:/images/images/addbook.png</normaloff>:/images/images/addbook.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>68</width>
-         <height>68</height>
-        </size>
-       </property>
-       <property name="checkable">
-        <bool>false</bool>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextUnderIcon</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="toolButton_addmember">
-       <property name="maximumSize">
-        <size>
-         <width>220</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Sitka Small</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QToolButton{border-radius:11px;
-background-color: rgb(146, 193, 255);
-}
-QToolButton:hover{
-background-color: rgb(255, 166, 139);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>Add Member</string>
-       </property>
-       <property name="icon">
-        <iconset resource="Icons.qrc">
-         <normaloff>:/images/images/addmember.png</normaloff>:/images/images/addmember.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>68</width>
-         <height>68</height>
-        </size>
-       </property>
-       <property name="checkable">
-        <bool>false</bool>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextUnderIcon</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="toolButton_viewbook">
-       <property name="maximumSize">
-        <size>
-         <width>220</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Sitka Small</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QToolButton{border-radius:11px;
-background-color: rgb(146, 193, 255);
-}
-QToolButton:hover{
-background-color: rgb(255, 166, 139);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>View Book</string>
-       </property>
-       <property name="icon">
-        <iconset resource="Icons.qrc">
-         <normaloff>:/images/images/viewbook .png</normaloff>:/images/images/viewbook .png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>68</width>
-         <height>68</height>
-        </size>
-       </property>
-       <property name="checkable">
-        <bool>false</bool>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextUnderIcon</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="toolButton_viewmember">
-       <property name="maximumSize">
-        <size>
-         <width>220</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Sitka Small</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QToolButton{border-radius:11px;
-background-color: rgb(146, 193, 255);
-}
-QToolButton:hover{
-background-color: rgb(255, 166, 139);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>View Member</string>
-       </property>
-       <property name="icon">
-        <iconset resource="Icons.qrc">
-         <normaloff>:/images/images/viewmembers.png</normaloff>:/images/images/viewmembers.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>68</width>
-         <height>68</height>
-        </size>
-       </property>
-       <property name="checkable">
-        <bool>false</bool>
-       </property>
-       <property name="toolButtonStyle">
-        <enum>Qt::ToolButtonTextUnderIcon</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources>

@@ -12,13 +12,14 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(920, 550)
+        MainWindow.resize(920, 542)
         MainWindow.setStyleSheet("background-color: rgb(217, 218, 255);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.tabWidget = QtWidgets.QTabWidget(parent=self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(6, 6, 801, 461))
-        self.tabWidget.setStyleSheet("background-color: rgb(222, 255, 233);")
+        self.tabWidget.setStyleSheet("background-color: rgb(255, 196, 199);")
         self.tabWidget.setTabShape(QtWidgets.QTabWidget.TabShape.Rounded)
         self.tabWidget.setObjectName("tabWidget")
         self.tab_1 = QtWidgets.QWidget()
@@ -27,12 +28,24 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.horizontalWidget = QtWidgets.QWidget(parent=self.tab_1)
         self.horizontalWidget.setStyleSheet("QWidget{\n"
-"background-color: rgb(196, 255, 178);\n"
+"\n"
+"    background-color: rgb(243, 255, 196);\n"
+"\n"
+"\n"
 "}")
         self.horizontalWidget.setObjectName("horizontalWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalWidget)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.lineEdit_bookid = QtWidgets.QLineEdit(parent=self.horizontalWidget)
+        self.lineEdit_bookid.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.lineEdit_bookid.setStyleSheet("QLineEdit{border-radius:5px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"}\n"
+"QLineEdit:focus{\n"
+"border: 2px solid rgb(255, 215, 238);\n"
+"}\n"
+"")
         self.lineEdit_bookid.setObjectName("lineEdit_bookid")
         self.horizontalLayout.addWidget(self.lineEdit_bookid)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
@@ -63,12 +76,24 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addWidget(self.horizontalWidget)
         self.horizontalWidget_2 = QtWidgets.QWidget(parent=self.tab_1)
         self.horizontalWidget_2.setStyleSheet("QWidget{\n"
-"background-color: rgb(196, 255, 178);\n"
+"\n"
+"    background-color: rgb(243, 255, 196);\n"
+"\n"
+"\n"
 "}")
         self.horizontalWidget_2.setObjectName("horizontalWidget_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalWidget_2)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.lineEdit_memberid = QtWidgets.QLineEdit(parent=self.horizontalWidget_2)
+        self.lineEdit_memberid.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.lineEdit_memberid.setStyleSheet("QLineEdit{border-radius:5px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"}\n"
+"QLineEdit:focus{\n"
+"border: 2px solid rgb(255, 215, 238);\n"
+"}\n"
+"")
         self.lineEdit_memberid.setObjectName("lineEdit_memberid")
         self.horizontalLayout_2.addWidget(self.lineEdit_memberid)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
@@ -131,9 +156,18 @@ class Ui_MainWindow(object):
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.tab_2)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.lineEdit_submission = QtWidgets.QLineEdit(parent=self.tab_2)
+        self.lineEdit_submission.setMaximumSize(QtCore.QSize(16777215, 80))
+        self.lineEdit_submission.setStyleSheet("QLineEdit{border-radius:5px;\n"
+"background-color: rgb(217, 255, 193);\n"
+"}\n"
+"QLineEdit:focus{\n"
+"border: 2px solid rgb(255, 215, 238);\n"
+"}\n"
+"")
         self.lineEdit_submission.setObjectName("lineEdit_submission")
         self.verticalLayout_5.addWidget(self.lineEdit_submission)
         self.tableWidget = QtWidgets.QTableWidget(parent=self.tab_2)
+        self.tableWidget.setStyleSheet("background-color: rgb(255, 227, 194);")
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(4)
         self.tableWidget.setRowCount(0)
@@ -145,7 +179,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(3, item)
-        self.tableWidget.horizontalHeader().setDefaultSectionSize(198)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(295)
         self.verticalLayout_5.addWidget(self.tableWidget)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
@@ -197,13 +231,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.addItem(spacerItem5)
         self.verticalLayout_5.addLayout(self.horizontalLayout_4)
         self.tabWidget.addTab(self.tab_2, "")
-        self.widget2 = QtWidgets.QWidget(parent=self.centralwidget)
-        self.widget2.setGeometry(QtCore.QRect(820, 70, 91, 391))
-        self.widget2.setObjectName("widget2")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget2)
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_5.addWidget(self.tabWidget)
+        self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
-        self.toolButton_addbook = QtWidgets.QToolButton(parent=self.widget2)
+        self.toolButton_addbook = QtWidgets.QToolButton(parent=self.centralwidget)
         self.toolButton_addbook.setMaximumSize(QtCore.QSize(145, 16777215))
         font = QtGui.QFont()
         font.setFamily("Sitka Small")
@@ -224,7 +255,7 @@ class Ui_MainWindow(object):
         self.toolButton_addbook.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.toolButton_addbook.setObjectName("toolButton_addbook")
         self.verticalLayout.addWidget(self.toolButton_addbook)
-        self.toolButton_addmember = QtWidgets.QToolButton(parent=self.widget2)
+        self.toolButton_addmember = QtWidgets.QToolButton(parent=self.centralwidget)
         self.toolButton_addmember.setMaximumSize(QtCore.QSize(220, 16777215))
         font = QtGui.QFont()
         font.setFamily("Sitka Small")
@@ -245,7 +276,7 @@ class Ui_MainWindow(object):
         self.toolButton_addmember.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.toolButton_addmember.setObjectName("toolButton_addmember")
         self.verticalLayout.addWidget(self.toolButton_addmember)
-        self.toolButton_viewbook = QtWidgets.QToolButton(parent=self.widget2)
+        self.toolButton_viewbook = QtWidgets.QToolButton(parent=self.centralwidget)
         self.toolButton_viewbook.setMaximumSize(QtCore.QSize(220, 16777215))
         font = QtGui.QFont()
         font.setFamily("Sitka Small")
@@ -266,7 +297,7 @@ class Ui_MainWindow(object):
         self.toolButton_viewbook.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.toolButton_viewbook.setObjectName("toolButton_viewbook")
         self.verticalLayout.addWidget(self.toolButton_viewbook)
-        self.toolButton_viewmember = QtWidgets.QToolButton(parent=self.widget2)
+        self.toolButton_viewmember = QtWidgets.QToolButton(parent=self.centralwidget)
         self.toolButton_viewmember.setMaximumSize(QtCore.QSize(220, 16777215))
         font = QtGui.QFont()
         font.setFamily("Sitka Small")
@@ -287,6 +318,7 @@ class Ui_MainWindow(object):
         self.toolButton_viewmember.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.toolButton_viewmember.setObjectName("toolButton_viewmember")
         self.verticalLayout.addWidget(self.toolButton_viewmember)
+        self.horizontalLayout_5.addLayout(self.verticalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -322,11 +354,3 @@ class Ui_MainWindow(object):
         self.toolButton_viewmember.setText(_translate("MainWindow", "View Member"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())

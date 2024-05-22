@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
-    <height>450</height>
+    <width>367</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 218, 174);</string>
+   <string notr="true">background-color: rgb(153, 149, 136);</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -24,6 +24,15 @@
        <width>16777215</width>
        <height>35</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{border-radius:5px;
+background-color: rgb(217, 255, 193);
+}
+QLineEdit:focus{
+border: 2px solid rgb(255, 215, 238);
+}
+</string>
      </property>
      <property name="text">
       <string/>
@@ -41,6 +50,15 @@
        <height>35</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{border-radius:5px;
+background-color: rgb(217, 255, 193);
+}
+QLineEdit:focus{
+border: 2px solid rgb(255, 215, 238);
+}
+</string>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -56,6 +74,15 @@
        <width>16777215</width>
        <height>35</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{border-radius:5px;
+background-color: rgb(217, 255, 193);
+}
+QLineEdit:focus{
+border: 2px solid rgb(255, 215, 238);
+}
+</string>
      </property>
      <property name="text">
       <string/>
@@ -73,6 +100,15 @@
        <height>35</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{border-radius:5px;
+background-color: rgb(217, 255, 193);
+}
+QLineEdit:focus{
+border: 2px solid rgb(255, 215, 238);
+}
+</string>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -88,6 +124,15 @@
        <width>16777215</width>
        <height>35</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{border-radius:11px;
+background-color: rgb(146, 193, 255);
+}
+QPushButton:hover{
+background-color: rgb(255, 166, 139);
+}
+</string>
      </property>
      <property name="text">
       <string>Add Book</string>
