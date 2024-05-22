@@ -7,7 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-
+import sqlite3
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -82,7 +82,33 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.pushButton.clicked.connect(self.insert_book)
+    def insert_book(self):
+        try:
+            mydb = sqlite3.connect("DB.db")
+            title = self.lineEdit_title.text()
+            id = self.lineEdit_id.text()
+            author = self.lineEdit_author.text()
+            publisher = self.lineEdit_publisher.text()
+            if id == '' or author == '' or publisher == '' or title == '':
+                self.label.setText('Please fill all the fields.')
+                self.label.setStyleSheet('color:red')
+                return
+            mycursor = mydb.cursor()
+            query = 'INSERT INTO addbook (title,id, author, publisher) VALUES (?, ?, ?, ?)'
+            values = (title, id, author, publisher)
+            mycursor.execute(query, values)
+            mydb.commit()
+            mydb.close()
+            self.label.setText('Book Inserted!')
+            self.label.setStyleSheet('color:green')
+            self.lineEdit_title.setText("")
+            self.lineEdit_id.setText("")
+            self.lineEdit_author.setText("")
+            self.lineEdit_publisher.setText("")
 
+        except sqlite3.Error as e:
+            self.label.setText(f"Error: {e}")
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
