@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QMainWindow , QDialog
+from PyQt6.QtWidgets import QMainWindow , QDialog ,QMessageBox
 from window import Ui_MainWindow
 from addbook import Ui_Dialog
 from addmember import Add_Member
@@ -16,6 +16,7 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
         self.toolButton_viewmember.clicked.connect(self.view_member)
         self.lineEdit_bookid.returnPressed.connect(self.book_id)
         self.lineEdit_memberid.returnPressed.connect(self.member_id)
+        self.toolButton_issuebook.clicked.connect(self.issue_book)
     def add_book(self):
         dialog = QDialog(self)
         ui = Ui_Dialog()
@@ -61,3 +62,22 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
                 self.label_contactinfo.setText(f"Contact Info :{row[3]}")
         except sqlite3.Error as error:
             pass
+    def issue_book(self):
+        b_id = self.lineEdit_bookid.text()
+        m_id = self.lineEdit_memberid.text()
+        print('hhhhhh')
+        try:
+            mydb = sqlite3.connect('DB.db')
+            mycursor = mydb.cursor()
+            query = "INSERT INTO issue (bookID, memberID) VALUES (?, ?)"
+            query2 = "UPDATE addbook SET avail = FALSE WHERE id = ?"
+
+            value = (b_id, m_id)
+            mycursor.execute(query, value)
+            mycursor.execute(query2, (b_id,))
+            mydb.commit()
+            mydb.close()
+            print('here')
+            QMessageBox.about(self, 'Book Issued', 'Book has been issued')
+        except sqlite3.Error as error:
+            print(error)
