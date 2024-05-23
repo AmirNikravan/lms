@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QMainWindow , QDialog ,QMessageBox
+from PyQt6.QtWidgets import QMainWindow , QDialog ,QMessageBox,QToolBar,QTableWidgetItem
 from window import Ui_MainWindow
 from addbook import Ui_Dialog
 from addmember import Add_Member
@@ -17,6 +17,7 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
         self.lineEdit_bookid.returnPressed.connect(self.book_id)
         self.lineEdit_memberid.returnPressed.connect(self.member_id)
         self.toolButton_issuebook.clicked.connect(self.issue_book)
+        self.lineEdit_submission.returnPressed.connect(self.load_issue)
     def add_book(self):
         dialog = QDialog(self)
         ui = Ui_Dialog()
@@ -81,3 +82,17 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
             QMessageBox.about(self, 'Book Issued', 'Book has been issued')
         except sqlite3.Error as error:
             print(error)
+    def load_issue(self):
+        issue_id = self.lineEdit_submission.text()
+        try:
+            mydb = sqlite3.connect('DB.db')
+            mycursor = mydb.cursor()
+            mycursor.execute("SELECT * FROM issue WHERE bookId = '"+issue_id+"'")
+            myresult = mycursor.fetchall()
+            self.tableWidget.setRowCount(0)
+            for number,data in enumerate(myresult):
+                self.tableWidget.insertRow(number)
+                for column,value in enumerate(data):
+                    self.tableWidget.setItem(number, column, QTableWidgetItem(str(value)))
+        except sqlite3.Error as error:
+            pass
