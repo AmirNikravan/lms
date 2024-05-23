@@ -19,6 +19,7 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
         self.toolButton_issuebook.clicked.connect(self.issue_book)
         self.lineEdit_submission.returnPressed.connect(self.load_issue)
         self.toolButton_submit.clicked.connect(self.submmit_book)
+        self.toolButton_renew.clicked.connect(self.renew_book)
     def add_book(self):
         dialog = QDialog(self)
         ui = Ui_Dialog()
@@ -116,3 +117,17 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
 
         except sqlite3.Error as error:
             print(error)
+    def renew_book(self):
+        issue_id = self.lineEdit_submission.text()
+        try:
+            mydb = sqlite3.connect('DB.db')
+            if issue_id=='':
+                QMessageBox.about(self, 'Book Submission', 'Please enter book id')
+                return
+            mycursor = mydb.cursor()
+            query = "UPDATE issue SET issueTime = CURRENT_TIMESTAMP, renewCount=renewCount+1 WHERE bookID  = '" + issue_id + "'  "
+            mycursor.execute(query)
+            mydb.commit()
+            QMessageBox.about(self, "Book Renew", "Book Renewed Successfully")
+        except sqlite3.Error as error:
+            pass
