@@ -18,6 +18,7 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
         self.lineEdit_memberid.returnPressed.connect(self.member_id)
         self.toolButton_issuebook.clicked.connect(self.issue_book)
         self.lineEdit_submission.returnPressed.connect(self.load_issue)
+        self.toolButton_submit.clicked.connect(self.submmit_book)
     def add_book(self):
         dialog = QDialog(self)
         ui = Ui_Dialog()
@@ -66,7 +67,6 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
     def issue_book(self):
         b_id = self.lineEdit_bookid.text()
         m_id = self.lineEdit_memberid.text()
-        print('hhhhhh')
         try:
             mydb = sqlite3.connect('DB.db')
             mycursor = mydb.cursor()
@@ -78,10 +78,9 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
             mycursor.execute(query2, (b_id,))
             mydb.commit()
             mydb.close()
-            print('here')
             QMessageBox.about(self, 'Book Issued', 'Book has been issued')
         except sqlite3.Error as error:
-            print(error)
+            pass
     def load_issue(self):
         issue_id = self.lineEdit_submission.text()
         try:
@@ -89,6 +88,7 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
             mycursor = mydb.cursor()
             mycursor.execute("SELECT * FROM issue WHERE bookId = '"+issue_id+"'")
             myresult = mycursor.fetchall()
+            mycursor.close()
             self.tableWidget.setRowCount(0)
             for number,data in enumerate(myresult):
                 self.tableWidget.insertRow(number)
@@ -96,3 +96,23 @@ class LibrarySystem(QMainWindow,Ui_MainWindow):
                     self.tableWidget.setItem(number, column, QTableWidgetItem(str(value)))
         except sqlite3.Error as error:
             pass
+    def submmit_book(self):
+        issue_id = self.lineEdit_submission.text()
+        try:
+            mydb = sqlite3.connect('DB.db')
+            if issue_id=='':
+                QMessageBox.about(self, 'Book Submission', 'Please enter book id')
+                return
+            mycursor = mydb.cursor()
+            query = "DELETE FROM issue WHERE bookID = ?"
+            query2 = "UPDATE addbook SET avail = TRUE WHERE id = ?"
+
+            mycursor.execute(query, (issue_id,))
+
+            # Execute the UPDATE query
+            mycursor.execute(query2, (issue_id,))
+            mydb.commit()
+            QMessageBox.about(self, "Book Submission", "Book Submitted Successfully")
+
+        except sqlite3.Error as error:
+            print(error)
